@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Search Firefox tabs by URL or title pattern
 # Usage: fftabs-search.sh <pattern>
 
@@ -10,4 +10,4 @@ fi
 PATTERN="$1"
 
 ffsclient tabs list --format json | jq --arg p "$PATTERN" \
-    '[.[] | {device: .client, tabs: [.tabs[] | select((.title // "") + " " + (.urlHistory[0] // "") | test($p; "i"))]} | select(.tabs | length > 0)]'
+    '[.[] | select((.title // "") + " " + (.urlHistory[0] // "") | test($p; "i"))] | group_by(.client_name) | map({device: .[0].client_name, tabs: [.[] | {title: .title, url: .urlHistory[0]}]})'

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Check Firefox Sync authentication status
 
 if ffsclient collections &>/dev/null; then

@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.python-version
+venv/
+.venv/
+
+# Devbox
+.devbox/
+
+# Secrets
+secrets/
+*.secret
+
+# Environment
+.env
+.env.local
+
+# Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store

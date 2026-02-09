@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # List all synced Firefox tabs as JSON
 
 ffsclient tabs list --format json

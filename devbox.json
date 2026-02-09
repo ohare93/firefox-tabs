@@ -1,0 +1,15 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.16.0/.schema/devbox.schema.json",
+  "packages": [
+    "firefox-sync-client@latest",
+    "python3@latest",
+    "python312Packages.requests@latest",
+    "python312Packages.cryptography@latest",
+    "jq@latest"
+  ],
+  "shell": {
+    "init_hook": [
+      "export PYTHONPATH=\"$PWD/lib:$PYTHONPATH\""
+    ]
+  }
+}
